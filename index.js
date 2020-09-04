@@ -95,7 +95,7 @@ function Game(input) {
     return "You win";
   }
 }
-console.log(Game("rock"));
+// console.log(Game("rock"));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -111,7 +111,7 @@ function convert2(feet) {
   return feet * 30.48;
 }
 
-console.log(convert2(12));
+// console.log(convert2(12));
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
@@ -126,7 +126,7 @@ function annoyingSong(num) {
   return text;
 }
 
-console.log(annoyingSong(99));
+// console.log(annoyingSong(99));
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
@@ -149,12 +149,38 @@ function ComputerGrading(num) {
     return "F"
   }
 }
-console.log(ComputerGrading(85))
+// console.log(ComputerGrading(85))
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays
 // try looking up the .includes() method
+
+function countVowels(string){
+let fixedString = string.toLowerCase()
+let vowls = []
+
+for (let i = 0; i < fixedString.length; i++){
+  if (string[i] === "a" ){
+    vowls += string[i]    
+  }
+  if (string[i] === "e"){
+    vowls += string[i]    
+  }
+  if ( string[i] === "i"){
+    vowls += string[i]    
+  }
+  if ( string[i] === "o"){
+    vowls += string[i]    
+  }
+  if ( string[i] === "u"){
+    vowls += string[i]    
+  }
+  
+}
+return vowls;
+}
+console.log(countVowels("Darren Angus dinner "))
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
