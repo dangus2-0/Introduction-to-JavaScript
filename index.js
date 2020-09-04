@@ -78,37 +78,55 @@ function ComputerChoice() {
   } else if (computer === 2) {
     AIMove = "paper";
   }
-return AIMove
-  
+  return AIMove;
 }
 
-function Game(input){
-    let computerMove = ComputerChoice()
-    if (computerMove === input){
-        return 'This is a tie game!'
-    } else if(computerMove === "rock" && input === "sissors") {
-        return "Computer wins"
-    } else if (computerMove === "paper" && input === "rock") {
-        return "Computer wins"
-    } else if (computerMove === "sissors" && input === "paper") {
-        return " computer wins"
-    } else {
-        return "You win"
-    }
+function Game(input) {
+  let computerMove = ComputerChoice();
+  if (computerMove === input) {
+    return "This is a tie game!";
+  } else if (computerMove === "rock" && input === "sissors") {
+    return "Computer wins";
+  } else if (computerMove === "paper" && input === "rock") {
+    return "Computer wins";
+  } else if (computerMove === "sissors" && input === "paper") {
+    return " computer wins";
+  } else {
+    return "You win";
+  }
 }
 console.log(Game("rock"));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+function convert(KM) {
+  return KM * 0.621371;
+}
+
+console.log(convert(12));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+function convert2(feet) {
+  return feet * 30.48;
+}
 
+console.log(convert2(12));
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+function annoyingSong(num) {
+  let text = "";
+  for (let i = num; i >= 0; i--) {
+    text += `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${
+      i - 1
+    } bottles of soda on the wall, `;
+  }
+  return text;
+}
 
+console.log(annoyingSong(10));
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
