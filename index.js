@@ -1,9 +1,9 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-let votingAge;
-if (votingAge > 18) {
-  return true;
-}
+// let votingAge;
+// if (votingAge > 18) {
+//   return true;
+// }
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 let name;
@@ -67,34 +67,34 @@ console.log(DogFeeder(3, 12));
 // hint while you can complete this with only conditionals based
 // on strings it may help to equate choice to a number
 
-function ComputerChoice() {
-  let computer = Math.round(Math.random() * 2);
-  let AIMove;
+// function ComputerChoice() {
+//   let computer = Math.round(Math.random() * 2);
+//   let AIMove;
 
-  if (computer === 0) {
-    AIMove = "rock";
-  } else if (computer === 1) {
-    AIMove = "sissors";
-  } else if (computer === 2) {
-    AIMove = "paper";
-  }
-  return AIMove;
-}
+//   if (computer === 0) {
+//     AIMove = "rock";
+//   } else if (computer === 1) {
+//     AIMove = "sissors";
+//   } else if (computer === 2) {
+//     AIMove = "paper";
+//   }
+//   return AIMove;
+// }
 
-function Game(input) {
-  let computerMove = ComputerChoice();
-  if (computerMove === input) {
-    return "This is a tie game!";
-  } else if (computerMove === "rock" && input === "sissors") {
-    return "Computer wins";
-  } else if (computerMove === "paper" && input === "rock") {
-    return "Computer wins";
-  } else if (computerMove === "sissors" && input === "paper") {
-    return " computer wins";
-  } else {
-    return "You win";
-  }
-}
+// function Game(input) {
+//   let computerMove = ComputerChoice();
+//   if (computerMove === input) {
+//     return "This is a tie game!";
+//   } else if (computerMove === "rock" && input === "sissors") {
+//     return "Computer wins";
+//   } else if (computerMove === "paper" && input === "rock") {
+//     return "Computer wins";
+//   } else if (computerMove === "sissors" && input === "paper") {
+//     return " computer wins";
+//   } else {
+//     return "You win";
+//   }
+// }
 // console.log(Game("rock"));
 
 /************************************************************** Task 5 **************************************************************/
@@ -185,3 +185,35 @@ console.log(countVowels("Darren Angus dinner "))
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+function ComputerChoice() {
+  let computer = Math.round(Math.random() * 2);
+  let AIMove;
+
+  if (computer === 0) {
+    AIMove = "rock";
+  } else if (computer === 1) {
+    AIMove = "sissors";
+  } else if (computer === 2) {
+    AIMove = "paper";
+  }
+  return AIMove;
+}
+
+function Game() {
+  let computerMove = ComputerChoice();
+  let input = window.prompt('type your move')
+  if (computerMove === input) {
+    return ` Computer move is ${computerMove} Your move is ${input}, This is a tie game!`;
+  } else if (computerMove === "rock" && input === "sissors") {
+    return `Computer move is ${computerMove} Your move is ${input}, Computer wins `;
+  } else if (computerMove === "paper" && input === "rock") {
+    return `Computer move is ${computerMove} Your move is ${input}, Computer wins`;
+  } else if (computerMove === "sissors" && input === "paper") {
+    return `Computer move is ${computerMove} Your move is ${input}, computer wins`;
+  } else {
+    return `Computer move is ${computerMove} Your move is ${input}, You win`;
+  }
+}
+console.log(Game("rock"));
+
