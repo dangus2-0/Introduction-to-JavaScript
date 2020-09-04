@@ -126,7 +126,7 @@ function annoyingSong(num) {
   return text;
 }
 
-console.log(annoyingSong(10));
+console.log(annoyingSong(99));
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
@@ -135,6 +135,10 @@ console.log(annoyingSong(10));
 //70s should be Cs
 //60s should be D
 //and anything below 60 should be F
+
+function ComputerGrading(num) {
+  if ()
+}
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
